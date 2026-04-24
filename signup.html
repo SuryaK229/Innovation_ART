@@ -1,0 +1,93 @@
+z<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <form class="signup-form" id="signupForm" action="profile.html">
+      <h2>Sign Up</h2>
+      <h6>CREATE AN ACCOUNT TO EASILY SCHEDULE APPOINTMENTS ..! </h6>
+      <div class="input-group">
+        <label for="firstname">First Name *</label>
+        <input type="text" id="firstname" name="firstname" required>
+      </div>
+      <div class="input-group">
+        <label for="lastname">Last Name *</label>
+        <input type="text" id="lastname" name="lastname" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password *</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span id="passwordError" class="error-message"></span>
+      </div>
+      <div class="input-group">
+        <label for="phonenumber">Phone Number *</label>
+        <input type="tel" id="phonenumber" name="phonenumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+          placeholder="123-456-7890" required>
+      </div>
+      <div class="input-group">
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="input-group">
+        <label for="gender" style="padding-bottom: 10px;">Gender *</label>
+        <div class="gender-options">
+          <div class="radio-option">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+          </div>
+        </div>
+        <div class="h6">RECHECK ALL YOUR DETAILS ....!</div>
+      </div>
+      <div class="input-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const passwordError = document.getElementById('passwordError');
+    // Check if password has at least 1 character
+    if (password.length === 0) {
+      passwordError.textContent = 'Password must contain at least 1 character';
+      event.preventDefault();
+    } else {
+      passwordError.textContent = '';
+    }
+    // Check if password and confirm password match
+    if (password !== confirmPassword) {
+      passwordError.textContent = 'Passwords do not match';
+      event.preventDefault();
+    } else {
+      passwordError.textContent = '';
+    }
+  });
+  </script>
+</body>
+
+</html>

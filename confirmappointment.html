@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Confirmation</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .appointment-form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="appointment-form">
+    <h2>Appointment Confirmation</h2>
+
+    <label for="contactPreference">Contact Preference:</label>
+    <input type="radio" name="contactPreference" value="mobile"> Contact my mobile number
+    <input type="radio" name="contactPreference" value="email"> Contact my email
+    <input type="radio" name="contactPreference" value="message"> Send a message
+
+    <label for="previousPrescriptions" style="padding-top: 20px;">Previous Prescriptions:</label>
+    <textarea id="previousPrescriptions" name="previousPrescriptions" rows="4" placeholder="Enter previous prescriptions..."></textarea>
+
+    <label for="secureMessage">Secure Message to Doctor:</label>
+    <textarea id="secureMessage" name="secureMessage" rows="4" placeholder="Enter secure message to doctor..."></textarea>
+
+    <button onclick="confirmAppointment()">Confirm Appointment</button>
+  </div>
+
+  <script>
+    function confirmAppointment() {
+      var contactPreference = document.querySelector('input[name="contactPreference"]:checked');
+      var previousPrescriptions = document.getElementById('previousPrescriptions').value;
+      var secureMessage = document.getElementById('secureMessage').value;
+
+      alert('Appointment Confirmed!\nContact Preference: ' + (contactPreference ? contactPreference.value : 'Not selected') +
+        '\nPrevious Prescriptions: ' + previousPrescriptions +
+        '\nSecure Message to Doctor: ' + secureMessage);
+    }
+  </script>
+
+</body>
+</html>

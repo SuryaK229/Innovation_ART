@@ -1,0 +1,161 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  h6{
+    color: #d9534f;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .h6{
+    color: #d9534f;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #B2D3C2;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input[type="tel"]:focus,
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px #66afe9;
+  }
+  
+  .error-message {
+    color: #d9534f;
+    font-size: 14px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+/* Existing styles for the form */
+/* ... (previously defined styles) ... */
+
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  /* Additional styles for date and radio inputs */
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px #66afe9;
+}
+/* Existing styles for the form */
+/* ... (previously defined styles) ... */
+
+/* Additional styles for radio buttons */
+.gender-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  input[type="radio"] {
+    /* Reset default margin to align properly */
+    margin: 0;
+    /* Hide default radio button */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Use custom styles for the radio button */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input[type="radio"]:checked {
+    border-color: #4CAF50;
+  }
+  
+  input[type="radio"] + label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Optional: Visual indication for selected radio button label */
+  input[type="radio"]:checked + label::before {
+    content: '\2022'; /* Bullet symbol */
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+    color: #4CAF50;
+    font-size: 20px;
+  }
+  

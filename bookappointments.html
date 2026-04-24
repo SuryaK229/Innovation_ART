@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOK APPOINTMENTS</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <form action="bookappointmentstime.html">
+    <div class="sidebar">
+
+      <div class="menu">
+        <a href="#CLEVELAND" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('CLEVELAND')">CLEVELAND CLINIC</a>
+        <a href="#OMNI" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('OMNI')">OMNI CLINIC</a>
+        <a href="#MOUNT" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('MOUNT')">MOUNT SINAI CLINIC</a>
+        <a href="#MC" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('MC')">MC LEAN CLINIC</a>
+        <a href="#NYV" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('NYV')">NYV HOSPITAL </a>
+        <a href="#CARE" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('CARE')">CARE HOSPITAL</a>
+        <a href="#PVR" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('PVR')">PVR HOSPITAL</a>
+        <a href="#HV" style="padding-bottom: 30px; font-size: 14px;" onclick="changeContent('HV')">HV NURSING HOME</a>
+
+      </div>
+      
+    </div>
+    <div class="content" id="content">
+        <h1 style="text-align: center;">BOOK APPOINTMENTS</h1>
+        <H2 style="text-align: center;padding-top: 10px;">
+            PLEASE CHECK THE DOCTORS LIST IN THE HOSPITAL
+        </H2>
+        <H3 style="text-align: center;padding-top: 10px;">
+            PLEASE SELECT ANY HOSPITAL
+        </H3>
+    </div>
+    <div style="padding-left: 1300px;padding-top: 500px;">
+        <button type="submit" style="background-color: #4CAF50;padding-top: 10px; padding-bottom: 10px;padding-left: 10px;padding-right: 10px;margin-right: 100px;color: white;">Next</button>
+      </div>
+</form>
+<script>
+    function changeContent(page) {
+      var contentElement = document.getElementById('content');
+      switch (page) {
+        case 'CLEVELAND':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR JAMES</p><P style="text-align: center;padding-top: 20px">DR CARIE</p>';
+          break;
+        case 'OMNI':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR PREETHI</p><P style="text-align: center;padding-top: 20px">DR HARSHA</P>';
+          break;
+        case 'MOUNT':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR JACOB</p> <P style="text-align: center;padding-top: 20px">DR LINA</P>';
+          break;
+        case 'MC':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR HIMA</p><P style="text-align: center;padding-top: 20px">DR BHAVYA</P>';
+          break;
+        case 'NYV':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR PRIYA KODUMURI</p><P style="text-align: center;padding-top: 20px">DR RAMESH</P>';
+          break;
+        case 'CARE':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR SHIREESHA</p><P style="text-align: center;padding-top: 20px">DR SRIVALLI</P>';
+          break;
+        case 'PVR':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR SRINU</p><P style="text-align: center;padding-top: 20px">DR HARSHA NEELAM</P>';
+          break;
+        case 'HV':
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR SUMA</p><p style="text-align: center;padding-top: 20px">DR KUSUMA</p>';
+          break;
+        
+        default:
+          contentElement.innerHTML = '<H2 style="font-weight: bold;text-align: center;">DOCTORS LIST IN THE HOSPITAL</H2><p style="text-align: center;padding-top: 20px">DR JAMES</p><P style="text-align: center;padding-top: 20px">DR CARIE</p>';
+      }
+    }
+  </script>
+</body>
+</html>

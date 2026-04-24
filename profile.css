@@ -1,0 +1,75 @@
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #B2D3C2;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 500px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #66bb6a; /* Light green background color for the sidebar */
+      padding-top: 20px;
+    }
+
+    .profile {
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #4caf50; /* Darker green background color for the profile section */
+    }
+
+    .profile img {
+      width: 80px;
+      border-radius: 50%;
+    }
+
+    .menu {
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #43a047; /* Darker green background color for the menu section */
+      margin-top: 20px;
+    }
+
+    .content {
+      margin-left: 500px ;
+      padding: 20px;
+      
+    }
+
+    /* Style the links inside the sidebar */
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      display: block;
+    }
+
+    /* Change color on hover */
+    .sidebar a:hover {
+      background-color: #558b2f; /* Darker green background color on hover */
+    }
+    .dropdown {
+      margin-bottom: 20px;
+      padding-right: 50px;
+    }
+    .healthDisease{
+      padding-right: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }
+    .age{
+      padding-right: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }
+    .input-group {
+      margin-bottom: 20px;
+      margin-left: 800px;
+    }
